@@ -1,0 +1,131 @@
+sonata_admin:
+    title:      Admin
+    title_logo: bundles/cgmain/img/logo.png
+    security:
+        handler: sonata.admin.security.handler.acl
+        # acl security information
+        information:
+            GUEST:    [VIEW, LIST]
+            STAFF:    [EDIT, LIST, CREATE]
+            EDITOR:   [OPERATOR, EXPORT]
+            ADMIN:    [MASTER]
+        # permissions not related to an object instance and also to be available when objects do not exist
+        # the DELETE admin permission means the user is allowed to batch delete objects
+        admin_permissions: [CREATE, LIST, DELETE, UNDELETE, EXPORT, OPERATOR, MASTER]
+        # permission related to the objects
+        object_permissions: [VIEW, EDIT, DELETE, UNDELETE, OPERATOR, MASTER, OWNER]
+    dashboard:
+        groups:
+            cgmain.admin.group.content:
+                label: Dashboard
+                label_catalogue: CGMainBundle
+                icon: '<i class="fa fa-cogs"></i>'
+                items:
+                    - cg_main.admin.phone
+                    - cg_main.admin.computer
+                    - sonata.user.admin.user
+            cgmain.admin.group.blog:
+                label: Blog
+                label_catalogue: CGMainBundle
+                icon: '<i class="fa fa-comments-o"></i>'
+                items:
+                    - sonata.news.admin.post
+                    - sonata.news.admin.comment
+
+        blocks:
+            - { position: left, class: 'col-md-6', type: sonata.admin.block.admin_list}
+
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts: [admin]
+        sonata.admin.block.search_result:
+            contexts: [admin]
+        sonata.user.block.menu:    # used to display the menu in profile pages
+        sonata.user.block.account: # used to display menu option (login option)
+        sonata.block.service.text:
+        sonata.block.service.container:
+
+
+
+#SonataFormatterBundle
+sonata_formatter:
+    formatters:
+        markdown:
+            service: sonata.formatter.text.markdown
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+                - sonata.media.formatter.twig
+
+
+        text:
+            service: sonata.formatter.text.text
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+                - sonata.media.formatter.twig
+
+
+        rawhtml:
+            service: sonata.formatter.text.raw
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+                - sonata.media.formatter.twig
+
+
+        richhtml:
+            service: sonata.formatter.text.raw
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+                - sonata.media.formatter.twig
+
+
+        twig:
+            service: sonata.formatter.text.twigengine
+            extensions: [] # Twig formatter cannot have extensions
+
+    ckeditor:
+        templates:
+            browser: 'SonataFormatterBundle:Ckeditor:browser.html.twig'
+            upload: 'SonataFormatterBundle:Ckeditor:upload.html.twig'
+
+
+
+sonata_notification:
+    backend: sonata.notification.backend.doctrine
+    admin:
+        enabled: true
+
+    backends:
+        doctrine:
+            max_age:      86400     # max age in second
+            pause:        500000    # delay in microseconds
+            states:                 # raising errors level
+                in_progress: 10
+                error:       20
+                open:        100
+                done:        10000
+
+sonata_classification:
+    class:
+        tag:        Application\Sonata\ClassificationBundle\Entity\Tag
+        category:   Application\Sonata\ClassificationBundle\Entity\Category
+        collection: Application\Sonata\ClassificationBundle\Entity\Collection
+
+    admin:
+        tag:
+            class:       Sonata\ClassificationBundle\Admin\TagAdmin
+            controller:  SonataAdminBundle:CRUD
+            translation: SonataClassificationBundle
+        category:
+            class:       Sonata\ClassificationBundle\Admin\CategoryAdmin
+            controller:  SonataAdminBundle:CRUD
+            translation: SonataClassificationBundle
+        collection:
+            class:       Sonata\ClassificationBundle\Admin\CollectionAdmin
+            controller:  SonataAdminBundle:CRUD
+            translation: SonataClassificationBundle

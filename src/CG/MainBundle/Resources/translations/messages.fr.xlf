@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="49ee3087348e8d44e1feda1917443987" resname="Name">
+        <source>Name</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="b2ee912b91d69b435159c7c3f6df7f5f" resname="Number">
+        <source>Number</source>
+        <target>Number</target>
+      </trans-unit>
+      <trans-unit id="08796f06ba4b78f2dc50387d5a9f0824" resname="text.apples_remaining">
+        <source>text.apples_remaining</source>
+        <target>text.apples_remaining</target>
+      </trans-unit>
+      <trans-unit id="ee11cbb19052e40b07aac0ca060c23ee" resname="user">
+        <source>user</source>
+        <target>user</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

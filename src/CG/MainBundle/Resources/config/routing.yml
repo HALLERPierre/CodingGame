@@ -1,0 +1,21 @@
+cg_main_index:
+    path:     /
+    defaults: { _controller: CGMainBundle:Default:index }
+cg_main_compte:
+    path:     /account
+    defaults: { _controller: CGMainBundle:Default:account }
+cg_main_services:
+    path:     /services
+    defaults: { _controller: CGMainBundle:Default:services }
+cg_main_about:
+    path:     /about
+    defaults: { _controller: CGMainBundle:Default:about }
+cg_main_contact:
+    path:     /contact
+    defaults: { _controller: CGMainBundle:Default:contact }
+cg_main_news:
+    path:     /blog
+    defaults: { _controller: CGMainBundle:Blog:blog }
+cg_main_article:
+    path:     /blog/{id}
+    defaults: { _controller: CGMainBundle:Blog:article }

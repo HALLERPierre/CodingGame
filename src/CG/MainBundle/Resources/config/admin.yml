@@ -1,0 +1,21 @@
+services:
+    cg_main.admin.phone:
+        class: CG\MainBundle\Admin\PhoneAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Phone", label: "Phone" }
+        arguments:
+            - ~
+            - CG\MainBundle\Entity\Phone
+            - ~
+        calls:
+            - [ setTranslationDomain, [CGMainBundle]]
+    cg_main.admin.computer:
+        class: CG\MainBundle\Admin\ComputerAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Computer", label: "Computer" }
+        arguments:
+            - ~
+            - CG\MainBundle\Entity\Computer
+            - ~
+        calls:
+            - [ setTranslationDomain, [CGMainBundle]]
