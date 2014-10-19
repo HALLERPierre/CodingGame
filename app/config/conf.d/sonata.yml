@@ -1,6 +1,11 @@
+sonata_core: ~
+
 sonata_admin:
     title:      Admin
     title_logo: bundles/cgmain/img/logo.png
+    templates:
+        search:              SonataAdminBundle:Core:search.html.twig
+        search_result_block: SonataAdminBundle:Block:block_search_result.html.twig
     security:
         handler: sonata.admin.security.handler.acl
         # acl security information

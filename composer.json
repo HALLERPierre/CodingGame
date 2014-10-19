@@ -20,6 +20,7 @@
         "sensio/distribution-bundle": "~3.0",
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
+        "sonata-project/core-bundle": "~2.2@dev",
         "sonata-project/admin-bundle": "2.4.*@dev",
         "sonata-project/doctrine-orm-admin-bundle": "2.3.*@dev",
         "sonata-project/datagrid-bundle": "2.2.*@dev",

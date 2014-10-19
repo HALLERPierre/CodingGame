@@ -2,7 +2,7 @@ sonata_seo:
     default:          sonata.seo.page.default
     encoding:         UTF-8
     page:
-        title:            CGdroid Project
+        title:            Code for Fun Project
         metas:
             name:
                 keywords:             foo bar
@@ -17,7 +17,7 @@ sonata_seo:
 
                 # Open Graph information
                 # see http://developers.facebook.com/docs/opengraphprotocol/#types or http://ogp.me/
-                'og:site_name':       CGdroid
+                'og:site_name':       Code for Fun
                 'og:description':     ""
 
             http-equiv:

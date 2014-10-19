@@ -1,0 +1,65 @@
+{% extends '::base.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/cgmain/css/demo/demo.css') }}">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+
+{% endblock stylesheets %}
+{% block body %}
+
+        <div class="demo-1">
+            <div class="content">
+                <div id="large-header" class="large-header">
+                    <canvas id="demo-canvas"></canvas>
+                    <h1 class="main-title">Code for <span class="thin">Fun</span></h1>
+                    <div class="arrow animated bounce"></div>
+                </div>
+                <div class="clearfix">
+                </div>
+                <section class="codrops-header">
+                    <h1>L'équipe des apprentis 1A <span> est fière de vous présenter son site pour le ducking game !</span></h1>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h2>Julien Bernardo</h2>
+                            <br/>
+                            <img src="{{ asset('bundles/cgmain/img/chub.png') }}" class="img-responsive img-thumbnail" alt="avatar julien">
+                        </div>
+                        <div class="col-md-4">
+                            <h2>Pierre Haller</h2>
+                            <br/>
+                            <img src="{{ asset('bundles/cgmain/img/vador.png') }}" class="img-responsive img-thumbnail" alt="avatar pierre">
+                        </div>
+                        <div class="col-md-4">
+                            <h2>Florian Kromer</h2>
+                            <br/>
+                            <img src="{{ asset('bundles/cgmain/img/yoda.png') }}" class="img-responsive img-thumbnail" alt="avatar florian">
+                        </div>
+                    </div>
+    
+                </section>
+            </div>
+            <section class="related">
+                <p>Événement proposé par : </p>
+                <a href="http://www.telecomnancy.eu/">
+                    <img src="{{ asset('bundles/cgmain/img/logo_telecom.jpg') }}" alt="Télécom Nancy" />
+                    <h3>Télécom Nancy</h3>
+                </a>
+                <a href="http://www.versusmind.eu/">
+                    <img src="{{asset('bundles/cgmain/img/versusmind_footer.jpg')}}" alt="Versusmind" />
+                    <h3>Versusmind</h3>
+                </a>
+            </section>
+            </div>
+        </div><!-- /container -->
+
+
+{% endblock body %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/cgmain/js/demo/TweenLite.min.js') }}"></script>
+    <script src="{{ asset('bundles/cgmain/js/demo/EasePack.min.js') }}"></script>
+    <script src="{{ asset('bundles/cgmain/js/demo/rAF.js') }}"></script>
+    <script src="{{ asset('bundles/cgmain/js/demo/demo-1.js') }}"></script>
+{% endblock %}

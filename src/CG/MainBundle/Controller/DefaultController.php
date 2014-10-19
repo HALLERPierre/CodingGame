@@ -8,7 +8,8 @@ class DefaultController extends Controller
 {
 	public function indexAction()
 	{
-		return $this->render('CGMainBundle:Default:index.html.twig');
+		// return $this->render('CGMainBundle:Default:index.html.twig');
+		return $this->render('CGMainBundle:Demo:demo.html.twig');
 	}
 	public function accountAction()
 	{
