@@ -36,9 +36,14 @@ sonata_admin:
                 items:
                     - sonata.news.admin.post
                     - sonata.news.admin.comment
+                    - sonata.classification.admin.category
+                    - sonata.classification.admin.collection
+                    - sonata.classification.admin.tag
 
         blocks:
             - { position: left, class: 'col-md-6', type: sonata.admin.block.admin_list}
+            - { position: right, class: 'col-md-6', type: cg_main.admin.news}
+
 
 sonata_block:
     default_contexts: [cms]
@@ -51,6 +56,7 @@ sonata_block:
         sonata.user.block.account: # used to display menu option (login option)
         sonata.block.service.text:
         sonata.block.service.container:
+        cg_main.admin.news:
 
 
 

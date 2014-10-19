@@ -1,4 +1,4 @@
-CGdroid-web
+Code for fun | Ducking Game 2014 
 ============
 
 
@@ -11,7 +11,7 @@ In order to configure the project:
 
 - php app/console doctrine:database:create
 
-- php app/console doctrine:schema:update
+- php app/console doctrine:schema:update --force
 
 - php app/console fos:user:create --super-admin
 

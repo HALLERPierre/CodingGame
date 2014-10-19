@@ -17,3 +17,12 @@ services:
         scope: request # needed as we have the request as a dependency here
         tags:
             - { name: knp_menu.menu, alias: main } # The alias is what is used to retrieve the menu
+
+    cg_main.admin.news:
+        id: cg_main.admin.news
+        class: 'CG\MainBundle\Block\NewsBlockService'
+        tags:
+            - { name: sonata.block }
+        arguments: ["NewsBlockService","@templating"]
+        calls:
+            - [setEntityManager, ["@doctrine.orm.default_entity_manager"]]

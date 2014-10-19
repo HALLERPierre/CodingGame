@@ -2,11 +2,11 @@ sonata_seo:
     default:          sonata.seo.page.default
     encoding:         UTF-8
     page:
-        title:            Code for Fun Project
+        title:            Code for Fun | ducking game
         metas:
             name:
-                keywords:             foo bar
-                description:          The description
+                keywords:             concours versusmind duckinggame telecomnancy
+                description:          "Site internet de l'équipe code for fun, pour le concours ducking game édition 2014"
                 robots:               index, follow
                 viewport:             width=device-width, initial-scale=1
 
@@ -18,7 +18,7 @@ sonata_seo:
                 # Open Graph information
                 # see http://developers.facebook.com/docs/opengraphprotocol/#types or http://ogp.me/
                 'og:site_name':       Code for Fun
-                'og:description':     ""
+                'og:description':     "Site internet de l'équipe code for fun, pour le concours ducking game édition 2014"
 
             http-equiv:
                 'Content-Type':         text/html; charset=utf-8
