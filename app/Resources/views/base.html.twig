@@ -12,7 +12,8 @@
     {%  endblock favicon %}
 
     {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('bundles/cgmain/css/bootstrap-flatly.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/cgmain/css/vendor/bootstrap-flatly.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/cgmain/css/vendor/jquery.datetimepicker.css') }}">
         <link rel="stylesheet" href="{{ asset('bundles/cgmain/css/font-awesome.min.css') }}">
         <link rel="stylesheet" href="{{ asset('bundles/cgmain/css/style.css') }}">
 
@@ -33,7 +34,13 @@
     {% block javascripts %}
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="{{ asset('bundles/cgmain/js/bootstrap.min.js') }}"></script>
+
+        <script src="{{ asset('bundles/cgmain/js/jquery-1.11.0.min.js') }}"></script>
+        <script src="{{ asset('bundles/cgmain/js/vendor/bootstrap.min.js') }}"></script>
+        {# custom #}
+        <script src="{{ asset('bundles/cgmain/js/vendor/jquery.datetimepicker.js') }}"></script>
+        <script src="{{ asset('bundles/cgmain/js/main.js') }}"></script>
+
         <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
         <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
         <script>
